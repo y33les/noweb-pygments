@@ -1,0 +1,54 @@
+%\documentclass{scrartcl}
+\documentclass{article}
+\usepackage{noweb}
+\usepackage{fancyvrb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{texments}
+
+\title{An example F\#/noweb literate program}
+
+\author{Phil Yeeles}
+
+\fvset{commandchars=\\\{\}}
+
+%% PYGMENTS STYLE INSERTED HERE AUTOMATICALLY %%
+
+\begin{document}
+
+%\tableofcontents
+%\newpage
+%\listoffigures
+%\newpage
+%\listoftables
+%\newpage
+\maketitle
+
+@ Foo bar baz quux.
+
+<<FooMod>>=
+module FooMod
+
+@ This is an example F\# program.
+
+<<Program>>=
+open System
+
+[<EntryPoint>]
+let main args =
+    printfn "Nice command-line arguments! Here's what System.Text.Json has to \
+             say about them:"
+
+    let value, json = 2,"foo"
+    printfn $"Input: %0A{value}"
+    printfn $"Output: %s{json}"
+
+    0 // return an integer exit code
+
+@ And here's the entire program:--
+
+<<Program.fs>>=
+<<Program>>
+
+@
+
+\end{document}
