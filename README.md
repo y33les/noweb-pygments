@@ -4,4 +4,4 @@
 
 You'll need Python3 with the `pygments` package installed, as well as a working LaTeX distribution.  In this example, we're using XeTeX; I haven't tried it with vanilla LaTeX yet, so YMMV.  To be honest, YMMV in general &ndash; this is a pretty ugly hack.
 
-I've included rhe results of building this demo document in `Program.tex` and `Program.pdf`, for reference.
+I've included the results of building this demo document in `Program.tex` and `Program.pdf`, for reference.
